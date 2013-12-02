@@ -17,7 +17,7 @@ module Sunzi
       do_deploy(first, *args)
     end
 
-    desc 'provision [user@host:port] [role] [--sudo]'
+    desc 'provision [user@host:port] [role] [--sudo]', 'Provision a server'
     method_options :sudo => false
     def provision(first, *args)
       do_deploy(first, *args)
