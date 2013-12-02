@@ -16,7 +16,12 @@ module Sunzi
     def deploy(first, *args)
       do_deploy(first, *args)
     end
-    alias_method :provision, :deploy
+
+    desc 'provision [user@host:port] [role] [--sudo]'
+    method_options :sudo => false
+    def provision(first, *args)
+      do_deploy(first, *args)
+    end
 
     desc 'compile', 'Compile sunzi project'
     def compile(role = nil)
